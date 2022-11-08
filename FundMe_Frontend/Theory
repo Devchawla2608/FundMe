@@ -1,0 +1,37 @@
+In this we are going to create a website to interact with backend
+In this we are using html , css and javascriot instead of react
+and nodejs
+
+Firstly i have too connect with metamsk so is create a function name connect in which
+i wrote some limes of code with the help of metamas's websites
+
+Note-> There is an important note that we have metamask extenshion so if we type window.ethereum tha it will not give me undefined
+
+After connecting trhough metamask we will create a function of funding
+
+async function fund(){
+firstly we created a inmput t o get value of eth that user want to send and fetch as in the form of ethAmount
+
+    to fund we use ethers as we used before
+    we have to get provider  , signer , contract
+
+    <!-- Provider  -->
+
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+    <!-- Signer -->
+
+const signer = provider.getSigner();
+
+    <!-- contract -->
+
+const contract = new ethers.Contract(ContractAddress, abi, signer);
+
+To get the contract we need Contract Address , ABI and signer
+
+We got ContractAddress , ABI from backend vaya finding in attifacts
+
+and we imported vaya creating the ethers-5.6 file and importing data form imternet
+in future we will use react or node thatn it will not require to do this
+
+}
